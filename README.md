@@ -14,7 +14,13 @@ After this I will begin the phase of creating aliens and refine gameplay.
 
 
 
+Development Phase 2:
+--------------------------------------------------------------------------
+Generate a fleet of aliens that will move down, and side to side until they have all been eliminated by the player. I will also be analyzing which areas of the code I might need to refactor before building the new ideas. 
 
+Development Phase 3: 
+---------------------------------------------------------------------------
+Create a score system. Analyze code to see if any methods or classes can be refactored. Decide if there are any additional features to be adeed. This will also be the final stage of development in my pygame project. 
 
 
 Imports for this project: 
