@@ -74,6 +74,8 @@ class AlienInvasion:
             self.stats.reset_stats()
             self.stats.game_active = True
             self.sb.prep_score()
+            self.sb.prep_level()
+            self.sb.prep_ships()
             self.aliens.empty()
             self.bullets.empty()
 
@@ -140,6 +142,11 @@ class AlienInvasion:
             self._create_fleet()
             self.settings.increase_speed()
 
+            #Increase level. 
+            self.stats.level += 1 
+            self.sb.prep_level()
+
+
     def _check_aliens_bottom(self):
         """Check if any aliens have reached the bottom of the screen."""
         screen_rect = self.screen.get_rect()
@@ -154,8 +161,9 @@ class AlienInvasion:
         
         if self.stats.ships_left > 0:
 
-            #decrement ships_left.
+            #decrement ships_left, and update scoreboard.
             self.stats.ships_left -= 1
+            self.sb.prep_ships()
 
              #get rid of any remaining aliens and bullets
             self.aliens.empty()
@@ -238,7 +246,9 @@ class AlienInvasion:
 
         #Draw the play button if the game is inactive. 
         if not self.stats.game_active:
-            self.play_button.draw_button()    
+            self.play_button.draw_button()
+            
+
         #make the most recently drawn screen visible. 
         pygame.display.flip()
 

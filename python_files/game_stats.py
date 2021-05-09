@@ -1,3 +1,5 @@
+import json
+
 class GameStats:
     """Track statistics for Alien Invasion"""
 
@@ -14,4 +16,15 @@ class GameStats:
         """Initialize statistics that can change during the game."""
         self.ships_left = self.settings.ship_limit
         self.score = 0
-        
+        self.level = 1
+    
+    def get_stored_highscore(self):
+        """Get highscore saved in the highscores.json file."""
+        filename = 'highScores.json'
+        try:
+            with open(filename) as f:
+                self.high_score = json.load(f)
+        except FileNotFoundError:
+            return None
+        else:
+            return self.high_score
