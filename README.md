@@ -20,7 +20,11 @@ Generate a fleet of aliens that will move down, and side to side until they have
 
 Development Phase 3: 
 ---------------------------------------------------------------------------
-Create a score system. Analyze code to see if any methods or classes can be refactored. Decide if there are any additional features to be adeed. This will also be the final stage of development in my pygame project. 
+Create a score system. Analyze code to see if any methods or classes can be refactored. Decide if there are any additional features to be adeed. 
+
+Final Development Phase: 
+----------------------------------------------------------------------------
+Sound effects added, as well as a highscore that will be stored in a json file to be used to keep the high score persistent everytime the game is reopened. I also plan to tweak the sound efeects more once I learn a bit more about pygame mixer.
 
 
 Imports for this project: 
@@ -28,3 +32,7 @@ Imports for this project:
 
 import sys: uses system tools for quit so the player can exit game 
 import pygame: contains the functionality needed to make the game. 
+import json: to store the highscores
+
+Thank you so much for checking out my project and I hope that you enjoyed the game. I am currently lookig for work, so if you would like to hire me contact me at ianmatknott@gmail.com 
+
